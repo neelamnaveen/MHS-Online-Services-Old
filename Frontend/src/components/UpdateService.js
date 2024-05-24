@@ -36,7 +36,7 @@ export default function InsertService() {
     useEffect(() => {
         const getService = async () => {
           try {
-            const res = await fetch(`http://localhost:3001/services/${id}`, {
+            const res = await fetch(`/services/${id}`, {
               method: "GET",
               headers: {
                 "Content-Type": "application/json"
@@ -76,7 +76,7 @@ export default function InsertService() {
         setError("");
 
         try {
-            const response = await fetch(`http://localhost:3001/updateservice/${id}`, {
+            const response = await fetch(`/updateservice/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

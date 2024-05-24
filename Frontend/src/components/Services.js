@@ -12,7 +12,7 @@ export default function Services() {
     const getServices = async (e) => {
 
         try {
-            const res = await fetch("http://localhost:3001/services", {
+            const res = await fetch("/services", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -35,7 +35,7 @@ export default function Services() {
 
     const deleteService = async (id) => {
 
-        const response = await fetch(`http://localhost:3001/deleteservice/${id}`, {
+        const response = await fetch(`/deleteservice/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

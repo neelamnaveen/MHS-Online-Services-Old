@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
+// require('dotenv').config()
 
 export default function InsertService() {
     const [name, setName] = useState("");
@@ -43,7 +44,7 @@ export default function InsertService() {
         setError("");
 
         try {
-            const res = await fetch("http://localhost:3001/insertservice", {
+            const res = await fetch("/insertservice", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

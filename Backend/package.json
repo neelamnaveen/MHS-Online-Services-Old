@@ -1,7 +1,6 @@
 {
   "name": "service_management_system_backend",
   "version": "1.0.0",
-  "proxy": "http://localhost:3001",
   "description": "Services Management System Backend",
   "main": "index.js",
   "scripts": {
