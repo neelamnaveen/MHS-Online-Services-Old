@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(router);
 
 if(process.env.NODE_ENV==="production"){
-  app.use(express.static('../frontend/build'));
+  app.use(express.static('../Frontend/build'));
   app.get("*",(req, res) =>{
-      res.sendFile(__dirname + '../frontend/build/index.html');
+      res.sendFile('Frontend/build/index.html', { root: /opt/render/project/src });
   })
 }
 
