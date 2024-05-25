@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(router);
 
 if(process.env.NODE_ENV==="production"){
-  app.use(express.static('../Frontend/build/static'));
+  app.use(express.static('../Frontend/build'));
   app.get("*",(req, res) =>{
       res.sendFile('Frontend/build/index.html', { root: __dirname.slice(0, -7) });
   })
